@@ -41,6 +41,29 @@ export interface Database {
           fat?: number | null
         }
       }
+      workouts: {
+        Row: {
+          id: string
+          user_id: string
+          created_at: string
+          type: 'push' | 'pull' | 'cardio'
+          completed: boolean
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          created_at?: string
+          type: 'push' | 'pull' | 'cardio'
+          completed?: boolean
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          created_at?: string
+          type?: 'push' | 'pull' | 'cardio'
+          completed?: boolean
+        }
+      }
     }
     Views: {
       [_ in never]: never
