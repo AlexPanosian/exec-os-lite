@@ -18,7 +18,8 @@
       "Bash(npm run lint)",
       "Bash(cat:*)",
       "Bash(tree:*)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []
