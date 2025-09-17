@@ -64,6 +64,62 @@ export interface Database {
           completed?: boolean
         }
       }
+      trips: {
+        Row: {
+          id: string
+          user_id: string
+          created_at: string
+          destination: string
+          country: string
+          city: string
+          accommodation: string | null
+          start_date: string
+          end_date: string
+          flight_number: string | null
+          departure_airport: string | null
+          arrival_airport: string | null
+          departure_time: string | null
+          arrival_time: string | null
+          notes: string | null
+          status: 'planned' | 'in_progress' | 'completed' | 'cancelled'
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          created_at?: string
+          destination: string
+          country: string
+          city: string
+          accommodation?: string | null
+          start_date: string
+          end_date: string
+          flight_number?: string | null
+          departure_airport?: string | null
+          arrival_airport?: string | null
+          departure_time?: string | null
+          arrival_time?: string | null
+          notes?: string | null
+          status?: 'planned' | 'in_progress' | 'completed' | 'cancelled'
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          created_at?: string
+          destination?: string
+          country?: string
+          city?: string
+          accommodation?: string | null
+          start_date?: string
+          end_date?: string
+          flight_number?: string | null
+          departure_airport?: string | null
+          arrival_airport?: string | null
+          departure_time?: string | null
+          arrival_time?: string | null
+          notes?: string | null
+          status?: 'planned' | 'in_progress' | 'completed' | 'cancelled'
+        }
+      }
     }
     Views: {
       [_ in never]: never
